@@ -1,7 +1,8 @@
 name: Bug
 description: Report something that is not working as expected
 type: EM Bug
-projects: AneoGroup/projects/57
+projects: 
+  - AneoGroup/57
 body:
   - type: markdown
     attributes:
