@@ -1,8 +1,7 @@
 name: Bug
 description: Report something that is not working as expected
-title: "[Bug]: "
-labels:
-  - bug
+type: EM Bug
+projects: AneoGroup/projects/57
 body:
   - type: markdown
     attributes:
