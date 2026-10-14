@@ -1,3 +1,3 @@
-# Organization-wide issue templates
+# Aneo
 
-This special repository contains the organization-wide issue templates.
+Aneo is a Nordic renewable energy and energy-transition company headquartered in Trondheim, Norway.
