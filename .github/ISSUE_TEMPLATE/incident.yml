@@ -1,0 +1,116 @@
+name: Incident
+description: >-
+  Report a newly detected operational incident and capture the information
+  needed to begin investigation and mitigation.
+projects: []
+type: EM Incident
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to report an active or newly detected operational incident.
+
+        Focus on what you are observing rather than trying to determine the root cause.
+        Include enough information for someone else to begin investigating.
+
+  - type: textarea
+    id: observation
+    attributes:
+      label: What is happening?
+      description: >-
+        Describe what you observed. Focus on symptoms and unexpected behaviour
+        rather than possible causes.
+      placeholder: >-
+        Describe the problem as clearly and concretely as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: What is the impact?
+      description: >-
+        Describe what is affected and the consequences. This could include users,
+        systems, processes, data, integrations, or business operations.
+      placeholder: >-
+        For example: Forecasts are not being published, affecting downstream
+        systems.
+    validations:
+      required: true
+
+  - type: input
+    id: first_observed
+    attributes:
+      label: When was it first observed?
+      description: >-
+        Give an exact or approximate time if known. Include the timezone if relevant.
+      placeholder: "2026-10-20 12:45"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Where was it observed?
+      description: >-
+        Identify the relevant environment, service, component, integration,
+        customer, asset, or other context that may help narrow the investigation.
+      placeholder: |
+        Environment:
+        Service/component:
+        Other relevant context:
+    validations:
+      required: false
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Current status
+      description: What is the situation right now?
+      options:
+        - Still occurring
+        - Intermittent
+        - Recovered, but cause is unknown
+        - Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: >-
+        Add any useful evidence such as error messages, logs, screenshots,
+        alerts, dashboards, traces, or links.
+      placeholder: |
+        Error message:
+        Relevant logs:
+        Dashboard or alert:
+        Screenshot or other evidence:
+    validations:
+      required: false
+
+  - type: textarea
+    id: recent_changes
+    attributes:
+      label: Recent changes
+      description: >-
+        If known, describe any deployments, configuration changes, data changes,
+        dependency changes, or other events that happened shortly before the incident.
+      placeholder: >-
+        Leave blank if you are not aware of any relevant recent changes.
+    validations:
+      required: false
+
+  - type: textarea
+    id: actions_taken
+    attributes:
+      label: Actions already taken
+      description: >-
+        Describe any troubleshooting, mitigation, retries, restarts, rollbacks,
+        failovers, or workarounds already attempted.
+      placeholder: >-
+        Include the outcome of each action where possible.
+    validations:
+      required: false
