@@ -1,0 +1,58 @@
+name: EM Task
+description: >-
+  Define a concrete piece of implementation work within a Feature.
+type: EM Task
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for a concrete, actionable piece of work within a Feature.
+
+        A Task should always belong to a parent Feature. Keep the Task focused on
+        implementation; broader context, rationale, scope, and design belong in
+        the Feature and its related documentation.
+
+  - type: textarea
+    id: work
+    attributes:
+      label: Work to be done
+      description: >-
+        Describe the concrete change or activity that needs to be completed.
+        Be specific enough that someone can understand what work is expected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: completion
+    attributes:
+      label: Completion criteria
+      description: >-
+        Describe what must be true for this Task to be considered complete.
+        Prefer observable and verifiable criteria.
+      placeholder: |
+        - ...
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation_notes
+    attributes:
+      label: Implementation notes
+      description: >-
+        Add technical details, constraints, affected components, or guidance
+        specific to this Task. Reference the design document instead of
+        duplicating the information there.
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: >-
+        Note any other Tasks, systems, decisions, or external work that must
+        be completed before or alongside this Task.
+    validations:
+      required: false
