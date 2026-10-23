@@ -1,4 +1,4 @@
-name: Bug
+name: EM Bug
 description: Report something that is not working as expected
 type: EM Bug
 
@@ -36,10 +36,12 @@ body:
         2. ...
         3. ...
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: context
     attributes:
       label: Additional context
       description: Logs, screenshots, links, environment information, etc.
+    validations:
+      required: false
