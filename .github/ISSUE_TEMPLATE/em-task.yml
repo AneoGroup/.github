@@ -10,17 +10,19 @@ body:
         Use this form for a concrete, actionable piece of work within an EM
         Feature.
 
-        Tasks should have a parent EM Feature, which provides the
-        broader context and requirements. Keep Tasks lightweight
+        EM Tasks should have a parent EM Feature, which provides the
+        broader context and requirements. Keep EM Tasks lightweight
         and include only as much detail as needed.
 
   - type: textarea
     id: work
     attributes:
-      label: Work to be done
+      label: Description
       description: >-
         Describe the concrete change or activity that needs to be completed.
         Be specific enough that someone can understand what work is expected.
+        Include any decisions, or external work that must be completed before or
+        alongside this EM Task.
     validations:
       required: true
 
@@ -29,7 +31,7 @@ body:
     attributes:
       label: Completion criteria
       description: >-
-        Describe what must be true for this Task to be considered complete.
+        Describe what must be true for this EM Task to be considered complete.
         Prefer observable and verifiable criteria.
       placeholder: |
         - ...
