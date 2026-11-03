@@ -1,0 +1,27 @@
+name: EM Task
+description: >-
+  Define a concrete piece of implementation work within a Feature.
+type: EM Task
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for a concrete, actionable piece of work within an EM
+        Feature.
+
+        EM Tasks should have a parent EM Feature, which provides the
+        broader context and requirements. Keep EM Tasks lightweight
+        and include only as much detail as needed.
+
+  - type: textarea
+    id: work
+    attributes:
+      label: Description
+      description: >-
+        Describe the concrete change or activity that needs to be completed.
+        Be specific enough that someone can understand what work is expected.
+        Include any decisions, or external work that must be completed before or
+        alongside this EM Task. If known, include completion criteria.
+    validations:
+      required: true
